@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Støt Radar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="css/img/r.png" alt="Bevar Radar Logo">
+            </a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="omradar.html">Om Radar</a></li>
+            <li><a href="faelles.html">Fællesskab</a></li>
+            <li><a href="stot.html">Støt Radar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="kontakt.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+    <header class="baggrund3">
+        <div class="hero-text">
+            <h1>STØT RADAR.</h1>
+        </div>
+    </header>
+
+    <script>
+        // Ændrer navbarens baggrund ved scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Burger menu funktionalitet
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        });
+    </script>
+
+<section>
+
+    <div class="intro-text2">
+        <p><br> <br> Desværre står vi overfor en udfordrende situation fra starten af 2025, og vi ser nu på,<br> hvordan vi kan modtage støtte fra jer, der bruger Radar. Vi er dybt taknemmelige <br> for enhver form for hjælp og ser frem til at byde dig velkommen hos Radar. Lad os sammen<br>  sikre, at Radar fortsætter med at være et levende sted for musik og kultu i Aarhus.<br> <br> </p>
+    </div>
+    <div class="image-container">
+        <div class="image-box">
+            <img src="css/img/frivllig.jpg" alt="Bliv Frivillig">
+            <div class="text-box">
+                <h1>BLIV FRIVILLIG.</h1>
+            </div>
+        </div>
+
+        <!-- Sektion 2: Donation -->
+        <div class="image-box">
+            <img src="css/img/don.jpg" alt="Donation">
+            <div class="text-box">
+                <h1>DONATION.</h1>
+            </div>
+        </div>
+
+        <!-- Sektion 3: Merch -->
+        <div class="image-box">
+            <img src="css/img/merch.jpg" alt="Merch">
+            <div class="text-box">
+                <h1>MERCH.</h1>
+            </div>
+        </div>
+
+        <!-- Sektion 4: Støtte Events -->
+        <div class="image-box">
+            <img src="css/img/stot.jpg" alt="Støtte Events">
+            <div class="text-box">
+                <h1>STØTTE EVENTS.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Bevar Radar</h3>
+        <ul>
+          <li>Om Radar</li>
+          <li>Fællesskab</li>
+          <li>Støt Radar</li>
+          <li>Events</li>
+          <li>Kontakt os</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Medier</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Radar</h3>
+        <ul>
+          <li>Karen Wegeners Gade 6</li>
+          <li>DK 8000 Aarhus C</li>
+          <li>Telefon +45 8676 0344</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fællesskab</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="css/img/r.png" alt="Bevar Radar Logo">
+            </a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="omradar.html">Om Radar</a></li>
+            <li><a href="faelles.html">Fællesskab</a></li>
+            <li><a href="stot.html">Støt Radar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="kontakt.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+    <header class="baggrund4">
+        <div class="hero-text">
+            <h1>FÆLLESSKAB.</h1>
+        </div>
+    </header>
+
+    <script>
+        // Ændrer navbarens baggrund ved scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Burger menu funktionalitet
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        });
+    </script>
+
+<div class="unique-section">
+    <div class="unique-text">
+        <h1>MATHILDE ROSENGAARD</h1>
+        <p>Mathilde Rosengaard, stifter af Aarhus Lydforening, har skabt innovative projekter og opnået anerkendelse i musikmiljøet med støtte fra Radar. Her fandt hun et kreativt og åbent rum, der gav hende mulighed for at udvikle sig både som musiker og iværksætter.</p>
+        <a href="mathilde.html" class="unique-btn">Læs mere</a>
+    </div>
+    <div class="unique-image">
+        <img src="css/img/mathilde.jpg" alt="Mathilde Rosengaard">
+    </div>
+</div>
+
+<div class="unique-section unique-reverse">
+    <div class="unique-image">
+        <img src="css/img/elias.jpg" alt="Elias Nielsen">
+    </div>
+    <div class="unique-text">
+        <h1>ELIAS NIELSEN</h1>
+        <p>Baris Citirikaya, leder og booker på Turkis, fik sin start i musikmiljøet gennem Radar, der dengang hed Musikcaféen. Her blev han inspireret til at støtte Det Turkiske Telt og senere Turkis. Radar har fungeret som en vigtig samarbejdspartner og rollemodel, særligt i forhold til professionel sparring og talentudvikling.</p>
+        <a href="elias.html" class="unique-btn">Læs mere</a>
+    </div>
+</div>
+
+<div class="unique-section">
+    <div class="unique-text">
+        <h1>RIKKE SEVERINSEN</h1>
+        <p>Rikke Severinsen, har i mange år været frivillig hos Radar. Hendes engagement har været med til at styrke fællesskabet i musikkulturen og give en stemme til nye talenter.</p>
+        <a href="rikke.html" class="unique-btn">Læs mere</a>
+    </div>
+    <div class="unique-image">
+        <img src="css/img/rikke.jpg" alt="Rikke Severinsen">
+    </div>
+</div>
+
+<div class="unique-section unique-reverse">
+    <div class="unique-image">
+        <img src="css/img/sofie.jpg" alt="Sofie Skovmose">
+    </div>
+    <div class="unique-text">
+        <h1>SOFIE SKOVMOSE</h1>
+        <p>Sofie Skovmose, leder af Public Engagement på ARoS, fremhæver Radar som en modig og eksperimenterende aktør i Aarhus’ musikliv. Ifølge hende har Radar skabt et unikt fællesskab og løftet mange aktører gennem årene.</p>
+        <a href="sofie.html" class="unique-btn">Læs mere</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Bevar Radar</h3>
+        <ul>
+          <li>Om Radar</li>
+          <li>Fællesskab</li>
+          <li>Støt Radar</li>
+          <li>Events</li>
+          <li>Kontakt os</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Medier</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Radar</h3>
+        <ul>
+          <li>Karen Wegeners Gade 6</li>
+          <li>DK 8000 Aarhus C</li>
+          <li>Telefon +45 8676 0344</li>
+        </ul>
+      </div>
+    </div>
+</footer>
+</body>
+</html>

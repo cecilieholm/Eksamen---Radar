@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Radar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="css/img/r.png" alt="Bevar Radar Logo">
+            </a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="omradar.html">Om Radar</a></li>
+            <li><a href="faelles.html">Fællesskab</a></li>
+            <li><a href="stot.html">Støt Radar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="kontakt.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+    <header class="baggrund5">
+        <div class="hero-text">
+            <h1>OM RADAR.</h1>
+        </div>
+    </header>
+
+    <script>
+        // Ændrer navbarens baggrund ved scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Burger menu funktionalitet
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        });
+    </script>
+
+<main>
+    <!-- Sektion 1: Billede til venstre, tekst til højre -->
+    <section class="radar-section">
+      <img src="css/img/gods.jpg" alt="Godsbanen" class="radar-image">
+      <div class="radar-content">
+        <h2>RADAR.</h2>
+        <p>
+          På Radar tilbyder vi et varieret program med musik fra både lokale, nationale og internationale artister, med særlig vægt på eksperimenterende, alternative og nicheorienterede genrer. 
+          Vi udforsker krydsfeltet mellem musik og andre kunstformer og er altid åbne for at eksperimentere med nye koncert- og præsentationsformater.
+        </p>
+        <p>
+            <br>Siden 2001 har Radar været et af Danmarks 19 regionale spillesteder, støttet af Aarhus Kommune og Statens Kunstfond til drift og musikpræsentation. 
+        </p>
+      </div>
+    </section>
+
+    <!-- Sektion 2: Billede til højre, tekst til venstre -->
+    <section class="radar-section reverse">
+      <div class="radar-content">
+        <h2>TRUET FREMTID.</h2>
+        <p>
+            Radar står overfor en truet fremtid, hvor overlevelsen af Radar kan være i fare.  Fra 2025 står Radar uden bevilling som regionalt spillested, hvilket skaber en usikker og potentielt truet fremtid for spillested. Der arbejdes på alternative løsninger, der kan gøre det muligt for Radar at fortsætte sin indsats for vækstlaget samt de eksperimenterende og nicheprægede 
+
+            genrer. 
+            
+            <br><br>2025 tegner sig derfor som et år med så store udfordringer, at det faktisk ikke vil være muligt for Radar at klare sig uden ekstra økonomisk støtte.
+        </p>
+      </div>
+      <img src="css/img/amen.jpg" alt="Street Art - Amen" class="radar-image">
+    </section>
+
+    <!-- Sektion 3: Billede til venstre, tekst til højre -->
+    <section class="radar-section">
+      <img src="css/img/bold.jpg" alt="Basketball ved Radar" class="radar-image">
+      <div class="radar-content">
+        <h2>VI HAR BRUG FOR 
+
+            DIG.</h2>
+        <p>
+            Udfordringen er ikke kun økonomisk – det handler i lige så høj grad om at fremhæve Radars betydning og mobilisere opbakning fra både publikum og frivillige i byen for at sikre spillestedets fremtid. 
+
+            <br><br>Når vi går ind i 2025, har vi mere end nogensinde brug for din støtte. Enhver hjælp vil være uvurderlig for at bevare vores musikalske samlingspunkt. 
+            Du kan læse mere om, hvordan du kan støtte os under siden “Støt Radar”.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <section class="find-us-section">
+    <div class="find-us-text">
+        <h2>FIND OS HER.</h2>
+    </div>
+    <div class="find-us-map">
+        <!-- Brug en iframe til at integrere et kort -->
+        <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.15747%2C56.15067%2C10.21986%2C56.17235&amp;layer=mapnik"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Bevar Radar</h3>
+        <ul>
+          <li>Om Radar</li>
+          <li>Fællesskab</li>
+          <li>Støt Radar</li>
+          <li>Events</li>
+          <li>Kontakt os</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Medier</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Radar</h3>
+        <ul>
+          <li>Karen Wegeners Gade 6</li>
+          <li>DK 8000 Aarhus C</li>
+          <li>Telefon +45 8676 0344</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

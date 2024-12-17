@@ -1,0 +1,1128 @@
+/* Generelle stilindstillinger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: #000000;
+    background-image: url("img/baggrund11.jpg");
+    background-size: cover;  /* Billedet fylder hele baggrunden */
+    background-position: center 2500px;  /* Flytter billedet længere ned */
+    background-attachment: fixed;  /* Sørger for at billedet er fast, når du scroller */
+
+}
+
+/* Navigationsbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.345);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.logo img {
+    height: 90px; /* Justér højden på logoet */
+    width: auto; /* Bevarer billedets proportioner */
+    display: block; /* Sørger for, at det vises korrekt */
+}
+
+.logo a {
+    text-decoration: none; /* Ingen understregning */
+}
+
+
+/* Burger menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Navigationslinks */
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #73F64B;
+}
+
+/* Mobilmenu styling */
+.nav-links.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    z-index: 15;
+}
+
+.nav-links.mobile.active {
+    transform: translateY(0);
+}
+
+.nav-links.mobile li {
+    margin: 20px 0;
+}
+
+
+/*Forsidesbillede */
+.baggrund1 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/my-background.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+
+.baggrund2 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/events.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.baggrund3 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/stotradar.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.baggrund4 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/fælles.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.baggrund5 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/omradar.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.baggrund6 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/kontakt.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.baggrund7 {
+    width: 100%;
+    height: 100vh;
+    background: url('img/koncert.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #73F64B;
+    z-index: 2;
+    white-space: nowrap; 
+    overflow: hidden; /* Skjuler teksten, hvis den overskrider containerens bredde */
+    max-width: 100%; /* Gør, at teksten fylder hele containerens bredde, men ikke går ud over den */
+}
+
+.hero-text2 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #73F64B;
+    z-index: 2;
+    white-space: nowrap; 
+    overflow: hidden; /* Skjuler teksten, hvis den overskrider containerens bredde */
+    max-width: 100%; /* Gør, at teksten fylder hele containerens bredde, men ikke går ud over den */
+    font-size: 3rem;
+}
+
+.hero-text h1 {
+    font-size: 8rem; /* Stor overskrift */
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-weight: 1000;
+    font-style: normal;
+    font-family: "Anton SC", sans-serif;
+}
+
+
+/*fællesskab*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.unique-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.unique-section .unique-text {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #73F64B; 
+    margin-right: 20px; /*afstand mellem tekst og billede */
+    position: relative;
+    z-index: 0; /* Sørger for, at boksen ligger bag billedet */
+    min-height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.unique-section .unique-image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* Sørger for, at billedet ligger foran teksten */
+}
+
+.unique-text h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #000000;
+
+}
+
+.unique-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000000;
+    padding-left: 10%;
+}
+
+.unique-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #73F64B;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.unique-btn:hover {
+    background-color: #009900;
+}
+
+.unique-image img {
+    width: 117%;
+    height: auto;
+}
+
+/* Sørger for at rækkefølgen skifter ved 'unique-reverse' */
+.unique-section.unique-reverse .unique-text {
+    order: 2;
+}
+
+.unique-section.unique-reverse .unique-image {
+    order: 1;
+}
+
+
+/*RADARS SITUATION*/
+  .center-image {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0;
+    margin-top: 5%;
+
+}
+
+.center-image img {
+    max-width: 60%; 
+    height: auto; 
+    display: block; 
+}
+
+
+
+/* KOMMENDE KONCERTER */
+.three-images-heading {
+    text-align: left; 
+    font-size: 5rem; 
+    color: #73F64B; 
+    margin-bottom: -150px; 
+    margin-top: 140px; 
+    margin-left: 11%; 
+}
+
+.three-images {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; /* Styrer afstanden mellem billederne */
+    margin-top: 180px; /* For at give lidt afstand til de andre elementer */
+}
+
+
+.image-container {
+    text-align: center;
+    flex-basis: 25%; 
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+   
+}
+
+.image-container p {
+    margin-top: 10px; 
+    font-size: 2rem; 
+    color: #ffffff; 
+    margin-left: -70%;
+    font-size: 120%;
+    font-weight: bold;
+    padding-right: 5%;
+    text-align: left;
+}
+
+
+
+/* SOFIE OG ELIAS */
+.green-box {
+    background-color: #73F64B; /* Grøn baggrund */
+    display: flex;
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    padding: 40px;
+    margin: 20px 0;
+    margin-top: 7%;
+}
+
+.green-box .image-container {
+    text-align: center;
+    width: 60%; /* Øger bredden af hvert billede til 60% */
+    margin: 0 40px; /* Øger afstanden mellem billederne */
+}
+
+.green-box .image-container h2 {
+    font-size: 4rem; 
+    color: rgb(0, 0, 0);
+    margin-bottom: -10px; 
+    font-weight: 1000;
+    font-style: normal;
+    font-family: "Anton SC",sans-serif;
+}
+
+.green-box .image-container img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Glidende effekt */
+}
+
+.green-box .image-container img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Tilføjer en skygge */
+}
+
+
+
+/*de bedste øjeblikke*/
+.best-moments {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.best-moments h2 {
+    font-size: 3rem;
+    color: #ffffff; 
+    margin-bottom: 10px;
+    margin-top: 160px;
+}
+
+
+.best-moments-images {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Hvert billede */
+.best-moments .image-container {
+    flex-basis: 45%; 
+    max-width: 40%;
+    text-align: center;
+}
+
+.best-moments .image-container img {
+    width: 100%; 
+    height: auto; 
+    
+}
+
+
+
+/* events */
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-text {
+    padding: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 10%;
+    margin-left: 30%;
+}
+
+
+.section {
+    width: 100%;
+    height: calc(100vh / 3); /* Hver sektion fylder en tredjedel af skærmens højde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.section.green {
+    background-color: #73F64B;
+    color: black;
+}
+
+.section.black {
+    background-color: black;
+    color: #73F64B;
+}
+
+
+.green-box-link {
+    text-decoration: none; /* Fjerner understregningen */
+    color: inherit; 
+    display: block; /* Gør hele boksen klikbar */
+}
+
+
+
+
+
+
+/*STØT RADAR*/
+.intro-text2 {
+    text-align: left;
+    color: white;
+    margin: 20px auto; 
+    max-width: 80%;
+    margin-left: 29%;
+}
+
+.intro-text2 p {
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    color: #ffffff; 
+}
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image-box {
+    position: relative;
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto 35px; /* Mellemrum mellem bokse */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.image-box:hover {
+    transform: scale(1.05); 
+}
+
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Hover-effekt for billeder */
+.image-box:hover img {
+    transform: scale(1.1); /* Gør billedet lidt større når musen er over */
+}
+
+
+.text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #73F64B;
+    color: black;
+    text-align: center;
+    padding: 10px 0; 
+    font-size: 1.2rem; 
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover-effekt for tekst */
+.image-box:hover .text-box {
+    background-color: #1cba00; /* Mørkere grøn, når musen er over */
+}
+
+
+
+/* Koncerter */
+header {
+    text-align: center;
+    margin: 0px 0;
+    font-weight: bold;
+}
+
+.koncert-header {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 8%;
+    padding-right: 23.5%;
+}
+
+/* Grid layout */
+.koncert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner pr. række */
+    gap: 20px; /* Afstand mellem elementer */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.koncert-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.koncert-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.koncert-info {
+    background-color: #73F64B;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transform: scale(1); 
+}
+
+.koncert-item:hover .koncert-info {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+
+.efter-grid-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #00000000;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.radar-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 90px 0; /* Øget afstand mellem sektioner */
+    text-align: center;
+}
+
+.radar-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 10px;
+}
+
+.radar-content {
+    max-width: 500px;
+    margin: 10px;
+    text-align: left;
+    font-size: 120%;
+}
+
+.radar-content h2 {
+    color: #73F64B;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.radar-content p {
+    margin-bottom: 10px;
+}
+.find-us-section {
+    background-color: #73F64B;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px; 
+    margin-bottom: 10%;
+}
+
+.find-us-text {
+    flex: 1 1 40%;
+    text-align: left;
+    padding: 20px;
+}
+
+.find-us-text h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #000;
+    margin-left: 30%;
+}
+
+.find-us-map {
+    flex: 1 1 40%; /* Mindre bredde for kortet */
+    max-width: 400px; /* Maksimal bredde for kortet */
+    height: 300px; /* Reducer højden for kortet */
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.find-us-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0; /* Fjern kant omkring iframe */
+}
+
+
+
+
+
+
+/* Formular */
+.formular-sektion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.formular-indhold {
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.formular-overskrift {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem; /* Tilpasset størrelse */
+    text-transform: uppercase; /* Store bogstaver */
+    margin-bottom: 10px; /* Afstand til teksten nedenunder */
+    font-weight: bold; /* Fed skrift */
+    text-align: center; /* Centreret tekst */
+    white-space: nowrap; /* Forhindrer linjeskift */
+    margin-left: -10%;
+}
+
+
+.formular-beskrivelse {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.3rem; 
+    line-height: 2; 
+    margin-bottom: 10px; 
+    text-align: left; 
+    max-width: 900px;
+    margin: 0 auto; 
+  
+}
+
+
+.formular {
+    background-color: #3333338d;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+
+.formular-titel {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.formular-felt {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.formular-tekstfelt {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.formular-knap {
+    background-color: #73F64B;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.formular-knap:hover {
+    transform: scale(1.05);
+}
+
+
+
+.footer {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #73F64B 30%);
+    color: #000000;
+    padding: 30px 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 15px;
+    flex-wrap: wrap; 
+}
+
+.footer-column {
+    flex: 1; /* Gør hver kolonne fleksibel */
+    padding: 10px;
+    min-width: 200px; /* Sætter en minimum bredde for hver kolonne */
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+
+
+
+
+/*responsivt*/
+
+/* burgermenu */
+@media (max-width: 767px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+    }
+}
+  
+/* burger - nav */
+@media (max-width: 767px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+    }
+}
+
+/*om radar*/
+@media screen and (max-width: 767px) {
+    .radar-section {
+        flex-direction: column; 
+    }
+
+    .radar-content {
+        order: -1; 
+        text-align: left;
+        max-width: 90%;
+    }
+
+    .radar-image {
+        max-width: 90%;
+    }
+
+    /* Find os-sektion */
+    .find-us-text h2 {
+        font-size: 2.5rem; 
+    }
+
+    .find-us-map {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .find-us-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .find-us-text {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20%;
+    }
+
+    .find-us-map {
+        width: 100%;
+        height: 600px;
+    }
+}
+
+ /* koncert */
+@media (max-width: 767px) {
+    .koncert-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolonne på mobil */
+    }
+
+    .koncert-header {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .koncert-info {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .concert-grid {
+        grid-template-columns: 1fr; /* 1 kolonne på mobil */
+    }
+} 
+
+
+/* støt radar */
+@media (max-width: 767px) {
+    .image-box {
+        width: 85%; 
+    }
+
+    .text-box {
+        font-size: 1rem; 
+        padding: 8px 0; /
+    }
+
+    .image-box img {
+        height: auto; 
+    }
+    .intro-text2 {
+        text-align: left;
+        color: white;
+        margin-left: 8%;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-box {
+        font-size: 0.9rem; 
+        padding: 5px 0; 
+    }
+}
+
+
+/* de bedste øjeblikke */
+@media (max-width: 767px) {
+    .best-moments .image-container {
+        flex-basis: 80%; 
+        max-width: 80%; 
+        margin: 10px 60px; 
+    }
+
+    .best-moments h2 {
+        font-size: 2.5rem; 
+    }
+
+    .best-moments-images {
+        flex-direction: column; 
+    }
+}
+
+
+/* events */
+@media (max-width: 767px) {
+    .section h1 {
+        font-size: 2rem;
+    }
+    .intro-text {
+        font-size: 1rem;
+        padding: 15px;
+        margin-left: 8%;
+    }
+}
+
+
+/* sofie og elias */
+@media (max-width: 767px) {
+    .green-box {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px; 
+    }
+
+    .green-box .image-container {
+        width: 50%; 
+        margin-bottom: 30px; 
+    }
+
+    .green-box .image-container img {
+        max-width: 100%; 
+    }
+
+    
+    .green-box .image-container h2 {
+        font-size: 2.5rem; 
+    }
+
+    /*støt radar*/
+}
+@media screen and (max-width: 767px) {
+    .unique-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Sørger for at rækkefølgen ændres på mobilen, så billedet kommer først */
+    .unique-section .unique-image {
+        order: 1; /* Billedet vises før tekstboksen */
+    }
+
+    .unique-section .unique-text {
+        order: 2; /* Tekstboksen vises efter billedet */
+    }
+
+    .unique-text {
+        padding: 10px;
+    }
+
+    .unique-image img {
+        width: 100%;
+    }
+}
+
+
+
+/* 3 kommende koncerter */
+@media (max-width: 767px) {
+    .three-images-heading {
+        font-size: 2.5rem; 
+        margin-left: 5%; /* Mindre venstreflytning på små skærme */
+    }
+}
+
+/* tekst stort billede */
+@media (max-width: 767px) {
+    .hero-text h1 {
+        font-size: 4rem; 
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-text h1 {
+        font-size: 3rem; 
+    }
+}
+
+
+/* formular */
+@media (max-width: 767px) {
+    .formular-indhold {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    @media (max-width: 767px) {
+        .formular-overskrift {
+            font-size: 1rem; 
+            margin-left: 3%;
+        }
+    
+        .formular-beskrivelse {
+            font-size: 0.9rem;
+        }
+    }
+    
+    .formular-knap {
+        font-size: 0.9rem;
+    }
+}
+
+
+/*footer*/
+@media screen and (max-width: 767px) {
+    .footer-content {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Tilføjer lidt afstand mellem kolonnerne */
+    }
+
+    .footer-column h3 {
+        font-size: 25px; 
+    }
+
+    .footer-column ul li {
+        font-size: 18px; 
+    }
+}

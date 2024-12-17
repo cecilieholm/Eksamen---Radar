@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="css/img/r.png" alt="Bevar Radar Logo">
+            </a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="omradar.html">Om Radar</a></li>
+            <li><a href="faelles.html">Fællesskab</a></li>
+            <li><a href="stot.html">Støt Radar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="kontakt.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+<section>
+    <header class="baggrund2">
+        <div class="hero-text">
+            <h1>EVENTS.</h1>
+        </div>
+    </header>
+</section>
+
+    <script>
+        // Ændrer navbarens baggrund ved scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Burger menu funktionalitet
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        });
+    </script>
+    
+    <section> 
+        <div class="container">
+            <div class="intro-text">
+                <br><br><br>Hos Radar tilbyder vi et væld af forskellige events.  Uanset om du er til musikalske <br>koncerter eller kreative workshops, finder du noget for dig her.  Som noget nyt afholder <br>vi hos Radar støtte events, hvor der vil være fokus på Radars overlevelse. Kom og<br>vær med til at støtte og opleve vores spændende arrangementer!
+            </div>
+            <a href="koncert.html" class="section green" onmouseover="enlargeText(this)" onmouseout="resetText(this)">
+                <h1>KONCERTER.</h1>
+            </a>
+            <div class="section black" onmouseover="enlargeText(this)" onmouseout="resetText(this)">
+                <h1>WORKSHOPS.</h1>
+            </div>
+            <div class="section green" onmouseover="enlargeText(this)" onmouseout="resetText(this)">
+                <h1>STØTTE EVENTS.</h1>
+            </div>
+            <div class="section black" onmouseover="enlargeText(this)" onmouseout="resetText(this)">
+                <h1>DJ-NIGHTS..</h1>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // gør teksten større, når musen holdes over
+        function enlargeText(element) {
+            const text = element.querySelector("h1");
+            text.style.transform = "scale(1.2)";
+            text.style.transition = "transform 0.3s ease";
+        }
+
+        // nulstil teksten, når musen flyttes væk
+        function resetText(element) {
+            const text = element.querySelector("h1");
+            text.style.transform = "scale(1)";
+        }
+    </script>
+
+    <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Bevar Radar</h3>
+        <ul>
+          <li>Om Radar</li>
+          <li>Fællesskab</li>
+          <li>Støt Radar</li>
+          <li>Events</li>
+          <li>Kontakt os</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Medier</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Radar</h3>
+        <ul>
+          <li>Karen Wegeners Gade 6</li>
+          <li>DK 8000 Aarhus C</li>
+          <li>Telefon +45 8676 0344</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

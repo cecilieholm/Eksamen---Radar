@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="css/img/r.png" alt="Bevar Radar Logo">
+            </a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="omradar.html">Om Radar</a></li>
+            <li><a href="faelles.html">Fællesskab</a></li>
+            <li><a href="stot.html">Støt Radar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="kontakt.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Ændrer navbarens baggrund ved scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Burger menu funktionalitet
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        });
+    </script>
+
+    <header class="baggrund6">
+        <div class="hero-text">
+            <h1>SPØRGSMÅL.</h1>
+        </div>
+    </header>
+
+<section class="formular-sektion">
+    <div class="formular-indhold">
+        <h1 class="formular-overskrift">SIDDER DU TILBAGE MED SPØRGSMÅL ELLER FEEDBACK?</h1>
+        <p class="formular-beskrivelse">
+            Måske har du spørgsmål eller ønsker at give feedback efter at have besøgt vores side. Du er derfor meget velkommen til at stille dine spørgsmål, dele dine tanker eller komme med forslag til nye initiativer, vi kan tage for at sikre Radars fremtid. Din mening er vigtig for os i arbejdet med at bevare Radar.
+        </p>
+        <form class="formular">
+            <h2 class="formular-titel">STIL DIT SPØRGSMÅL HER:</h2>
+            <label for="navn">NAVN:</label>
+            <input type="text" id="navn" name="navn" class="formular-felt" required>
+            
+            <label for="efternavn">EFTERNAVN:</label>
+            <input type="text" id="efternavn" name="efternavn" class="formular-felt" required>
+            
+            <label for="tekst">SKRIV DIN TEKST HER:</label>
+            <textarea id="tekst" name="tekst" class="formular-tekstfelt" rows="5" required></textarea>
+            
+            <button type="submit" class="formular-knap">SEND</button>
+        </form>
+    </div>
+</section>
+
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Bevar Radar</h3>
+        <ul>
+          <li>Om Radar</li>
+          <li>Fællesskab</li>
+          <li>Støt Radar</li>
+          <li>Events</li>
+          <li>Kontakt os</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Medier</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Radar</h3>
+        <ul>
+          <li>Karen Wegeners Gade 6</li>
+          <li>DK 8000 Aarhus C</li>
+          <li>Telefon +45 8676 0344</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
